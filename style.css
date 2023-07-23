@@ -1,20 +1,53 @@
 :root {
-    --coral: #F05D5E;
-    --teal: #0F7173;
-    --light: #E7ECEF;
-    --dark: #272932;
-    --camel: #D8A47F;
+  --coral: #f05d5e;
+  --teal: #0f7173;
+  --light: #e7ecef;
+  --dark: #272932;
+  --camel: #d8a47f;
 }
 
 body {
-    background-color: var(--light);
+  background-color: var(--light);
+  width: 95vw;
+  font-size: 1rem;
 }
 
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--dark);
+    color: var(--light);
+  }
+}
+
+.intro {
+  display: none;
+  color: var(--teal);
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 .card {
-    padding: 10px;
-    margin: 10px;
+  padding: 10px;
+  margin: 10px;
 }
 
 img {
-    width: 250px;
+  width: 250px;
+}
+
+@media only screen and (min-width: 700px) {
+  .intro {
+    display: block;
+  }
+  body {
+    font-size: 1.25rem;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  body {
+    font-size: 1.5rem;
+  }
 }
